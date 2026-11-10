@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.clonvo/mcp",
+  "title": "Clonvo",
+  "description": "Web search, scraping, crawling, research, a browser agent, and company and people data.",
+  "version": "1.3.0",
+  "websiteUrl": "https://clonvo.com/docs/mcp",
+  "repository": {
+    "url": "https://github.com/clonvodotcom/mcp",
+    "source": "github",
+    "id": "1452963642"
+  },
+  "icons": [
+    {
+      "src": "https://clonvo.com/favicon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": [
+        "any"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.clonvo.com/mcp"
+    }
+  ]
+}
