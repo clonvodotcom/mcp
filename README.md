@@ -14,7 +14,7 @@ This repository holds the server's documentation and its [MCP Registry](https://
 
 ## Before you connect
 
-[Create a Clonvo account](https://clonvo.com) and buy credits once. That moves your organization to Pay as you go, which the tools need. To run tools on your own provider keys, add them under **Provider keys → Tools**.
+[Create a Clonvo account](https://clonvo.com) and buy credits once. That moves your organization to Pay as you go, which the tools need. Calls run on credits, or on your own key for a tool provider under **Provider keys → Tools**.
 
 ## Connect with OAuth
 
@@ -65,9 +65,9 @@ Prices for each tool are on [clonvo.com/docs/tools](https://clonvo.com/docs/tool
 claude mcp add --transport http clonvo https://api.clonvo.com/mcp
 ```
 
-Then run `/mcp` in Claude Code and choose **Authenticate** for `clonvo`.
+Then run `/mcp` in Claude Code and choose **Authenticate** for `clonvo`. Add `--scope user` to use it in every project.
 
-To use an API key instead, for example in a `.mcp.json` committed for your team where each person sets `CLONVO_API_KEY`:
+To use an API key instead, add `--header "Authorization: Bearer $CLONVO_API_KEY"`, or commit a `.mcp.json` for your team where each person sets `CLONVO_API_KEY`:
 
 ```json
 {
@@ -83,7 +83,7 @@ To use an API key instead, for example in a `.mcp.json` committed for your team 
 }
 ```
 
-The [Clonvo skills](https://github.com/clonvodotcom/skills) plugin for Claude Code connects this server too, along with skills for building on the Clonvo API.
+The [Clonvo skills](https://github.com/clonvodotcom/skills) plugin for Claude Code connects this server too (sign in the same way), along with skills for building on the Clonvo API.
 
 ## Cursor
 
@@ -99,7 +99,7 @@ Add Clonvo to `.cursor/mcp.json` in your project, or to `~/.cursor/mcp.json` for
 }
 ```
 
-To use an API key instead, add `"headers": { "Authorization": "Bearer ${env:CLONVO_API_KEY}" }`.
+To use an API key instead, add `"headers": { "Authorization": "Bearer ${env:CLONVO_API_KEY}" }`. Cursor replaces `${env:CLONVO_API_KEY}` with the variable from the environment it starts in.
 
 ## VS Code
 
@@ -125,7 +125,7 @@ codex mcp add clonvo --url https://api.clonvo.com/mcp
 codex mcp login clonvo
 ```
 
-To use an API key instead, add `bearer_token_env_var = "CLONVO_API_KEY"` under `[mcp_servers.clonvo]` in `~/.codex/config.toml`.
+To use an API key instead, add the server with `--bearer-token-env-var CLONVO_API_KEY` and skip the login.
 
 ## Other clients
 
