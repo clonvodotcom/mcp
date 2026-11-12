@@ -1,6 +1,10 @@
 # Clonvo MCP server
 
+[Clonvo](https://clonvo.com) · [Docs](https://clonvo.com/docs/mcp) · [Tools](https://clonvo.com/docs/tools) · [Pricing](https://clonvo.com/pricing)
+
 [Clonvo](https://clonvo.com)'s remote [Model Context Protocol](https://modelcontextprotocol.io) server gives agents web search, page reading, site crawling, structured extraction, research reports, a browser agent, and company and people lookups.
+
+Clonvo is the AI gateway for agents: the same API key also calls 150+ models from OpenAI, Anthropic, Google and more. See [clonvo.com](https://clonvo.com).
 
 Calls run on your own Firecrawl, Tavily, Exa, Parallel or TinyFish keys when you've added them to Clonvo, otherwise on Clonvo credits. Every call is listed in Clonvo's Activity with its cost.
 
